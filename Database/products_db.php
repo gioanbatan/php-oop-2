@@ -7,7 +7,7 @@ require_once __DIR__ . "/../Models/Kennel.php";
 
 
 $products_db = [
-    new Food("Crocchette", "Purina", "https://picsum.photos/300/200", "123xyf", 7.65, new Category("cane"), 1, ["pollo", "verdure"], "secco", "sacchetto"),
+    new Food("Crocchette", "Purina", "https://www.purinashop.it/media/catalog/product/cache/379176e1991b23a6cc0d9d15dd56e0e0/P/U/PURINA_PRO_PLAN_Large_Athletic_Adult_OptiDigest_Cane_Crocchette_14kg_1_12366945.png", "123xyf", 7.65, new Category("cane"), 1, ["pollo", "verdure"], "secco", "sacchetto"),
     new Game("Osso finto", "Canis", "https://picsum.photos/300/200", "2w23e3f", 11.99, new Category("cane"), "6 x 22", "gomma", "si"),
     new Kennel("Suite", "Miaos", "https://picsum.photos/300/200", "2wg2g3f", 65.99, new Category("gatto"), "50 x 60 x60", 1.20, "cotone e poliestere")
 ];
