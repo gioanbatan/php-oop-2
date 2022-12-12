@@ -64,9 +64,15 @@ CreditCard
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-light bg-light justify-content-between mb-3">
+            <a class="navbar-brand ms-3">PetShop</a>
+            <form class="form-inline">
+                <button class="btn btn-outline-success my-2 my-sm-0 me-3" type="submit">Login</button>
+            </form>
+        </nav>
+    </header>
     <div class="container">
-        <h1 class="text-center mb-3">PetShop</h1>
-
         <div class="row row-cols-3">
 
             <?php foreach ($products_db as $product) { ?>
@@ -74,9 +80,20 @@ CreditCard
                     <div class="card">
                         <img class="card-img-top" src="<?php echo $product->image ?>" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $product->name ?></h5>
-                            <h6><?php echo get_class($product) ?></h6>
-                            <h6><?php echo $product->brand ?></h6>
+
+
+                            <div class="row">
+                                <div class="col-8">
+                                    <h5 class="card-title"><?php echo $product->name ?></h5>
+                                    <h6><?php echo "Marca: $product->brand " ?></h6>
+                                    <h6><?php echo "Tipologia: " . get_class($product) ?></h6>
+                                </div>
+                                <div class="col-4">
+                                    <p>Prezzo:</p>
+                                    <p><?php echo $product->price ?></p>
+                                </div>
+
+                            </div>
                             <hr>
                             <p class="card-text">
                                 <?php
@@ -90,7 +107,7 @@ CreditCard
                                 ?>
                                 <span class="d-inline-block ms-2"><?php echo ucfirst($product->category->category); ?></span>
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">Aggiungi al carrello</a>
                         </div>
                     </div>
                 </div>
