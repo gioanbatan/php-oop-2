@@ -1,4 +1,8 @@
 <?php
+
+/** Class Product for pets 
+ * @author Giovanni Bassani
+ */
 class Product
 {
     public $name;

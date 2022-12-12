@@ -1,5 +1,9 @@
 <?php
 
+/**  Class Food for pet
+ *Subclass of Product
+ *   @author Giovanni Bassani    
+ */
 class Food extends Product
 {
     public $weight_kg;
