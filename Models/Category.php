@@ -2,6 +2,7 @@
 
 /** 
  * Class Category of product
+ * @author Giovanni Bassani
  */
 class Category
 {
