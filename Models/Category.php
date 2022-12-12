@@ -14,8 +14,8 @@ class Category
      * @returns {any}
      * 
      */
-    function __contruct($category)
+    function __construct(String $category)
     {
-        $this->category = $catregory;
+        $this->category = $category;
     }
 }

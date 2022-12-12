@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/Models/Category.php";
+require_once __DIR__ . "/Models/Product.php";
 
 /*
 Product
@@ -24,21 +25,9 @@ Account
 CreditCard
 */
 
-
-class Product
-{
-    public $name;
-    public $code;
-    public $price;
-
-    public function __construct(String $name, String $code, int $price)
-    {
-        $this->name = $name;
-        $this->code = $code;
-        $this->price = $price;
-    }
-}
-
+// Testing object
+$objectTest = new Product("Crocchette", "123xyf", 7.65, new Category("Cane"));
+var_dump($objectTest);
 
 ?>
 
@@ -51,7 +40,7 @@ class Product
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href=" 	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 
 
     <title>PHP OOP 2</title>
