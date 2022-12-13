@@ -5,8 +5,15 @@ require_once __DIR__ . "/Models/Product.php";
 require_once __DIR__ . "/Models/Food.php";
 require_once __DIR__ . "/Models/Game.php";
 require_once __DIR__ . "/Models/Kennel.php";
+require_once __DIR__ . "/Models/Customer.php";
+require_once __DIR__ . "/Models/Cart.php";
 
-require_once __DIR__ . "/Views/Layout/head.php"
+require_once __DIR__ . "/Views/Layout/head.php";
+
+// Test gueat user
+$guest = new Customer("Test", "Cognome", "testtest@hotmail.com");
+$guest->cart = new Cart();
+$guest->cart->add($products_db[1]);
 
 /*
 Product
