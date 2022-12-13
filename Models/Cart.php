@@ -35,7 +35,16 @@ class Cart
         foreach ($this->products as $product) {
             $sum += $product->price;
         }
-        echo ("HELLO");
         return $sum;
+    }
+
+    //Get products list
+    public function getList()
+    {
+        $productListArray = [];
+        foreach ($this->products as $product) {
+            $productListArray[] = $product->name;
+        }
+        return $productListArray;
     }
 }

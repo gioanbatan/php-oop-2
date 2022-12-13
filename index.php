@@ -14,10 +14,19 @@ require_once __DIR__ . "/Views/Layout/head.php";
 $guest = new Customer("Test", "Cognome", "testtest@hotmail.com");
 $guest->cart = new Cart();
 $guest->cart->add($products_db[1]);
+$guest->cart->add($products_db[2]);
 var_dump($guest->cart->getTotal());
-$guest->cart->empty();
+// $guest->cart->empty();
 var_dump($guest->cart->getTotal());
 
+$productList = $guest->cart->getList();
+if (!empty($productList)) {
+    foreach ($productList as $key => $product) {
+        echo "$key: $product <br>";
+    }
+} else {
+    echo "Il carrello è vuoto!";
+}
 
 /*
 Product
