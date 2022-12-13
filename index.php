@@ -10,6 +10,13 @@ require_once __DIR__ . "/Models/Cart.php";
 
 require_once __DIR__ . "/Views/Layout/head.php";
 
+// Manage exceptions
+try {
+    $testingException = new Food("Gourmet", "Canin", "https://picsum.photos/300/200", "cfb435", "dieci", new Category("cane"), 1, ["pollo", "verdure"], "secco", "sacchetto");
+} catch (Exception $e) {
+    echo "Eccezione: " . $e->getMessage();
+}
+
 // Test guest user
 $guest = new Customer("Test", "Cognome", "testtest@hotmail.com");
 $guest->cart = new Cart();
